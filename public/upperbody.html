@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper Body Workouts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .workout-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workout-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upper Body Workouts</h1>
+    <div class="workout-container" id="workoutContainer"></div>
+    <a href="/" class="back-button">Back to Home</a>
+
+    <script>
+        const workouts = [
+            { 
+                name: 'Push-Ups', 
+                description: 'Start in a high plank position, lower your body until your chest nearly touches the floor, then push back up.',
+                image: 'https://via.placeholder.com/300x200?text=Push-Ups' 
+            },
+            { 
+                name: 'Pull-Ups', 
+                description: 'Grip the pull-up bar with palms facing away, pull your body up until your chin is above the bar, then lower slowly.',
+                image: 'https://via.placeholder.com/300x200?text=Pull-Ups' 
+            },
+            { 
+                name: 'Dumbbell Press', 
+                description: 'Lie on a bench, hold a dumbbell in each hand, push the weights up until your arms are straight, then lower slowly.',
+                image: 'https://via.placeholder.com/300x200?text=Dumbbell+Press' 
+            },
+            { 
+                name: 'Tricep Dips', 
+                description: 'Use parallel bars or a sturdy chair, lower your body by bending your elbows, then push back up.',
+                image: 'https://via.placeholder.com/300x200?text=Tricep+Dips' 
+            },
+            { 
+                name: 'Plank Shoulder Taps', 
+                description: 'Hold a plank position, tap your left shoulder with your right hand, then switch sides while keeping your core tight.',
+                image: 'https://via.placeholder.com/300x200?text=Plank+Shoulder+Taps' 
+            }
+        ];
+
+        const container = document.getElementById('workoutContainer');
+
+        workouts.forEach(workout => {
+            const div = document.createElement('div');
+            div.className = 'workout-item';
+            div.innerHTML = `
+                <h2>${workout.name}</h2>
+                <p>${workout.description}</p>
+                <img src="${workout.image}" alt="${workout.name}">
+            `;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
