@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Upper Body Workouts</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
         .workout-container {
             display: flex;
             flex-direction: column;
@@ -40,9 +36,23 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Fitness App</h1>
+        <p>Your personal workout generator</p>
+          <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="upperbody.html">Upperbody</a>
+            <a href="#">Services</a>
+            <a href="about.html">About</a>
+        </div>
+      </header>
     <h1>Upper Body Workouts</h1>
     <div class="workout-container" id="workoutContainer"></div>
-    <a href="/" class="back-button">Back to Home</a>
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <footer>
+        <p>&copy; 2025 Fitness App. All rights reserved.</p>
+    </footer>
 
     <script>
         const workouts = [

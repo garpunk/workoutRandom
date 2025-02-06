@@ -1,47 +1,67 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-    background-color: #f4f4f4;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f4f4f4;
+  margin: 0;
+    
   }
   
-  header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
   }
   
-  header h1 {
-    margin: 0;
+header h1 {
+  margin: 0;
   }
   
-  main {
-    margin: 20px auto;
-    padding: 20px;
+main {
+  margin: 20px auto;
+  padding: 20px;
   }
-  button{
-    font-size: 20px;
-  }
-  
-  .workout-category {
-    margin: 5px auto;
-    padding: 5px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    font-size: 24px; /* Smaller text */
-    width: 60%; /* Adjust width */
-  
+button{
+  font-size: 20px;
   }
   
-  footer {
-    margin-top: 20px;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.workout-category {
+  margin: 5px auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 24px; /* Smaller text */
+  width: 60%; /* Adjust width */
+  
   }
+  
+.navbar {
+  text-align: center;
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; 
+  padding: 10px 20px;
+
+}
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #575757;
+}
+  
+footer {
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
   
