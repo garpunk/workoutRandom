@@ -35,7 +35,7 @@
           description: description
         });
         console.log('Project added with ID: ', docRef.id);
-        alert('Project added successfully!');
+        alert('Workout added successfully!');
         fetchProjects();
       } catch (error) {
         console.error('Error adding project: ', error);
@@ -80,8 +80,8 @@
   </header>
   <div id="projects-container">
 
-  Your project page
-  <h1>Add Project</h1>
+  Completed Workouts
+  <h1>Add Workout</h1>
   <form id="addProjectForm">
     <label for="title">Workout:</label>
     <input type="text" id="title" name="title" required><br>
@@ -89,9 +89,9 @@
     <label for="description">Date Completed:</label>
     <textarea id="description" name="description" required></textarea><br>
 
-    <button type="submit">Add Project</button>
+    <button type="submit">Add Workout</button>
   </form>
-  <h2>Projects</h2>
+  <h2>Workouts</h2>
   <ul id="projectsList"></ul>
 </div>
 </body>
