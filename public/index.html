@@ -40,48 +40,35 @@
     <button id="generateWorkout">Generate Workout</button>
     <div id="workoutContainer"></div>
 
-<<<<<<< HEAD
     <!-- Workout Categories -->
-<div class="workout-container">
-  <a href="upperbody.html" class="workout-category">
-      <img src="photos/upperbody_arm.jpeg" width="200" height="150" alt="Upper Body">
-      <span>Upper Body</span>
-  </a>
-  <a href="#" class="workout-category">
-      <img src="https://via.placeholder.com/100x100?text=Legs" alt="Legs">
-      <span>Legs</span>
-  </a>
-  <a href="#" class="workout-category">
-      <img src="https://via.placeholder.com/100x100?text=Abs" alt="Abs">
-      <span>Abs</span>
-  </a>
-  <a href="#" class="workout-category">
-      <img src="https://via.placeholder.com/100x100?text=Cardio" alt="Cardio">
-      <span>Cardio</span>
-  </a>
-</div>
+    <div class="workout-container">
+      <a href="upperbody.html" class="workout-category">
+        <img
+          src="photos/upperbody_arm.jpeg"
+          width="200"
+          height="150"
+          alt="Upper Body"
+        />
+        <span>Upper Body</span>
+      </a>
+      <a href="#" class="workout-category">
+        <img src="https://via.placeholder.com/100x100?text=Legs" alt="Legs" />
+        <span>Legs</span>
+      </a>
+      <a href="#" class="workout-category">
+        <img src="https://via.placeholder.com/100x100?text=Abs" alt="Abs" />
+        <span>Abs</span>
+      </a>
+      <a href="#" class="workout-category">
+        <img
+          src="https://via.placeholder.com/100x100?text=Cardio"
+          alt="Cardio"
+        />
+        <span>Cardio</span>
+      </a>
+    </div>
 
-    <script>
-=======
-    <!-- <script>
->>>>>>> 0a27552 (made the javascript work)
-      document
-        .getElementById('generateWorkout')
-        .addEventListener('click', async () => {
-          const response = await fetch('/api/workout');
-          const workout = await response.json();
-
-          const container = document.getElementById('workoutContainer');
-          container.innerHTML = ''; // Clear previous workout n
-
-          for (const [category, exercise] of Object.entries(workout)) {
-            const div = document.createElement('div');
-            div.className = 'workout-category';
-            div.innerHTML = `<strong>${category}:</strong> ${exercise.name} (${exercise.reps})`;
-            container.appendChild(div);
-          }
-        });
-    </script>-->
+    ======= >>>>>>> 0a27552 (made the javascript work)
 
     <script src="script.js"></script>
 
