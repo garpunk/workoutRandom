@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Your Portfolio</title>
+    <title>Save Workout</title>
     <script src="config.js" defer></script>
     <script type="module" defer>
         // Talk about the json.stringify and console logs below for SECURITY - remove the stringfy and console
@@ -143,10 +143,10 @@
         window.deleteProject = async function (projectId) {
             try {
                 await deleteDoc(doc(db, 'projects', projectId));
-                console.log('Project deleted successfully!');
+                console.log('Workout deleted successfully!');
                 fetchProjects(); // Fetch projects again after deletion
             } catch (error) {
-                console.error('Error deleting project: ', error);
+                console.error('Error deleting workout: ', error);
                 alert('Error deleting project. Please check the console for details.');
             }
         };
@@ -166,7 +166,7 @@
                 });
                 renderProjectsList(projects);
             } catch (error) {
-                console.error('Error getting projects: ', error);
+                console.error('Error getting workouts: ', error);
                 // Handle the error gracefully (e.g., show an error message on the page)
             }
         };
@@ -267,8 +267,8 @@
                 fetchProjects(); // Fetch projects again after updating
                 cancelEdit(); // Hide the edit form
             } catch (error) {
-                console.error('Error updating project: ', error);
-                alert('Error updating project. Please check the console for details.');
+                console.error('Error updating workout: ', error);
+                alert('Error updating workout. Please check the console for details.');
             }
         };
     </script>
@@ -303,7 +303,7 @@
     </header>
     <p id="sign-out-message"></p>
 
-    <h1>Your project page</h1>
+    <h1>Add Workout</h1>
     <span id="authspan">Authenticated as:
         <span id="userName"></span>
         <span id="userEmail"></span>
@@ -312,26 +312,26 @@
             <div id="projects-container">
 
                 <div id="editProjectFormContainer" style="display: none;">
-                    <h2>Edit Project</h2>
+                    <h2>Edit Workout</h2>
                     <form id="editProjectForm">
                         <input type="hidden" id="editProjectId" name="editProjectId">
-                        <label for="editTitle">Project Name:</label>
+                        <label for="editTitle">Workout:</label>
                         <input type="text" id="editTitle" name="editTitle" required><br>
-                        <label for="editDescription">Project Description:</label>
+                        <label for="editDescription">Date Completed:</label>
                         <textarea id="editDescription" name="editDescription" required></textarea><br>
                         <button type="submit" onclick="updateProject()">Update (Save)</button>
                         <button type="button" onclick="cancelEdit()">Cancel</button>
                     </form>
                 </div>
-                <h2>Add Project</h2>
+                <h2>Add Workout</h2>
                 <form id="addProjectForm">
-                    <label for="title">Project Name:</label>
+                    <label for="title">Workout:</label>
                     <input type="text" id="title" name="title" required><br>
-                    <label for="description">Project Description:</label>
+                    <label for="description">Date Completed:</label>
                     <textarea id="description" name="description" required></textarea><br>
-                    <button type="submit">Add Project</button>
+                    <button type="submit">Add Workout</button>
                 </form>
-                <h2>Projects</h2>
+                <h2>Workouts</h2>
                 <ul id="projectsList"></ul>
             </div>
             <!-- Footer with dynamically calculated copyright year using JavaScript -->
