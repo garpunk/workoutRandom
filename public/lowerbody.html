@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lower Body Workouts</title>
+    <style>
+        .workout-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workout-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness App</h1>
+        <p>Your personal workout generator</p>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="upperbody.html">Upper Body</a>
+            <a href="lowerbody.html">Lower Body</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+        </div>
+    </header>
+    <h1>Lower Body Workouts</h1>
+    <div class="workout-container" id="workoutContainer"></div>
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <footer>
+        <p>&copy; 2025 Fitness App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const workouts = [
+            { 
+                name: 'Squats', 
+                description: 'Stand with feet shoulder-width apart, lower your hips back and down, then push through your heels to return to standing.',
+                image: 'photos/squats.jpeg'
+            },
+            { 
+                name: 'Lunges', 
+                description: 'Step forward with one leg, lowering your hips until both knees are bent at about 90 degrees, then push back up.',
+                image: 'photos/lunges.jpeg'
+            },
+            { 
+                name: 'Calf Raises', 
+                description: 'Stand up straight, push through the balls of your feet to raise your body, then lower slowly.',
+                image: 'photos/calfraises.jpeg'
+            },
+            { 
+                name: 'Step-Ups', 
+                description: 'Step onto a bench with one foot, push through the heel to lift your body up, then step back down.',
+                image: 'photos/stepups.jpeg'
+            },
+            { 
+                name: 'Wall Sit', 
+                description: 'Press your back against a wall, lower your body until knees are at 90 degrees, and hold the position.',
+                image: 'photos/wallsit.jpeg'
+            }
+        ];
+
+        const container = document.getElementById('workoutContainer');
+
+        workouts.forEach(workout => {
+            const div = document.createElement('div');
+            div.className = 'workout-item';
+            div.innerHTML = `
+                <h2>${workout.name}</h2>
+                <p>${workout.description}</p>
+                <img src="${workout.image}" alt="${workout.name}">
+            `;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
